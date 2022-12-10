@@ -6,7 +6,7 @@ export interface FormApp {
   lastName: string;
   email: string;
   info: string;
-  createdAt: Date;
+  createdAt?: Date;
 }
 
 export const FormCollection = new Mongo.Collection<FormApp>('work');

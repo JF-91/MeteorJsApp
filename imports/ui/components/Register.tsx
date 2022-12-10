@@ -1,7 +1,8 @@
 import { Box, Container, Typography, Stack, Paper } from '@mui/material'
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState, version } from 'react'
 import { FormApp } from '../common/FormApp'
-import { FormCollection } from '/imports/api/FormCollection'
+
+
 
 interface state {
     name: string;
@@ -10,16 +11,42 @@ interface state {
     info: string;
 }[]
 
+const initialValue:state = {
+    name: "",
+    lastName: "",
+    email: "",
+    info: ""
+}
+
 
 export const Register:FC<{}> = () => {
 
-    const [data, setData] = useState<state | undefined>()
-
-    const [getMongo, setGetMongo] = useState<Array<string>>([""])
 
 
+    const [data, setData] = useState<state[]>([])
+
+    const [getMongo, setGetMongo] = useState<state[]>([])
+
+
+    useEffect(() => {
+        setGetMongo([
+            ...getMongo,
+            ...data
+        ])
+      
+       
+       console.log('version react', version);
+       
+    }, [data])
    
-   
+    
+    console.log(getMongo);
+    
+
+        
+    
+    
+    
     
     
 

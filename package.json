@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^5.10.16",
     "formik": "^2.2.9",
     "meteor-node-stubs": "^1.2.1",
+    "nanoid": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.4.4",
